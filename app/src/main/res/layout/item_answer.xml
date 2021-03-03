@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dimen_8"
+    android:background="@color/colorWhite"
+    android:padding="@dimen/dimen_8">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_title_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_16"
+        app:layout_constraintBottom_toBottomOf="@id/iv_arrow_answer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_arrow_answer"
+        tools:text="@string/text_answer_value"/>
+
+    <ImageView
+        android:id="@+id/iv_arrow_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_drop_down"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/container_detail_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_answer">
+
+        <ImageView
+            android:id="@+id/iv_question_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/bg_image_error"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_question_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_12"
+            tools:text="Apakah ini pertanyaan?"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_user_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/colorRed"
+            android:textSize="@dimen/text_12"
+            tools:text="Jawaban Kamu salah"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_correct_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/colorGreen"
+            android:textSize="@dimen/text_12"
+            tools:text="Jawaban yang benar: A. Ini jawaban"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

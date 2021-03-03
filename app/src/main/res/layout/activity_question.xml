@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.question.QuestionActivity">
+
+    <LinearLayout
+        android:id="@+id/container_header_question"
+        style="@style/LinearLayoutAchievementTheme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_total_question"
+            style="@style/CardViewHeaderQuestionTheme"
+            android:layout_gravity="start">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_total_question"
+                style="@style/TextViewHeaderQuestionTheme"
+                tools:text="Quest. 1/5"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_timer_question"
+            style="@style/CardViewHeaderQuestionTheme">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_timer_question"
+                style="@style/TextViewHeaderQuestionTheme"
+                tools:text="10:00"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tl_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/container_header_question"
+        app:tabBackground="@color/colorPrimary"
+        app:tabIndicatorColor="@color/colorAccent"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="@color/colorAccent"
+        app:tabTextColor="@color/colorWhite"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp_question"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tl_question"
+        app:layout_constraintVertical_chainStyle="spread"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_end_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_8"
+        android:backgroundTint="@color/colorPrimary"
+        android:src="@drawable/ic_finish"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/colorWhite"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

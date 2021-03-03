@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.result.ResultActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_title_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/roboto_bold"
+        android:padding="@dimen/dimen_8"
+        android:text="@string/title_result"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_16"/>
+
+    <LinearLayout
+        android:id="@+id/container_header_result"
+        style="@style/LinearLayoutAchievementTheme"
+        android:gravity="center">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_total_question_result"
+            style="@style/CardViewHeaderQuestionTheme">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_total_question_result"
+                style="@style/TextViewHeaderQuestionTheme"
+                tools:text="Quest. 1/5"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_score_result"
+            style="@style/CardViewHeaderQuestionTheme">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_score_result"
+                style="@style/TextViewHeaderQuestionTheme"
+                tools:text="@string/text_score"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_correct_result"
+            style="@style/CardViewHeaderQuestionTheme">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_correct_result"
+                style="@style/TextViewHeaderQuestionTheme"
+                tools:text="@string/text_correct"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_wrong_result"
+            style="@style/CardViewHeaderQuestionTheme">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_wrong_result"
+                style="@style/TextViewHeaderQuestionTheme"
+                tools:text="@string/text_wrong"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_answer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dimen_8"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_answer"/>
+
+</LinearLayout>

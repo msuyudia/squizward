@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_8">
+
+        <ImageView
+            android:id="@+id/iv_question_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/bg_image_error"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_question_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16"
+            android:fontFamily="@font/roboto_regular"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_16"
+            tools:text="Logo apakah itu?"/>
+
+        <RadioGroup
+            android:id="@+id/rg_answers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/rb_answer_a"
+                style="@style/AnswerTheme"/>
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/rb_answer_b"
+                style="@style/AnswerTheme"/>
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/rb_answer_c"
+                style="@style/AnswerTheme"/>
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/rb_answer_d"
+                style="@style/AnswerTheme"/>
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/container_cb_answers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <CheckBox
+                android:id="@+id/cb_answer_a"
+                style="@style/AnswerTheme"/>
+
+            <CheckBox
+                android:id="@+id/cb_answer_b"
+                style="@style/AnswerTheme"/>
+
+            <CheckBox
+                android:id="@+id/cb_answer_c"
+                style="@style/AnswerTheme"/>
+
+            <CheckBox
+                android:id="@+id/cb_answer_d"
+                style="@style/AnswerTheme"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

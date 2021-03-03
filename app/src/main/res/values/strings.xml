@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Squizward</string>
+    <string name="text_empty_categories">Empty Category</string>
+    <string name="title_category">Category</string>
+    <string name="text_total_question_value">Quest. %d/%d</string>
+    <string name="text_question_value">Question %d</string>
+    <string name="text_timer_value">%s:%s</string>
+    <string name="text_correct_value">Correct %d</string>
+    <string name="text_wrong_value">Incorrect %d</string>
+    <string name="text_correct">Correct 0</string>
+    <string name="text_wrong">Incorrect 0</string>
+    <string name="text_empty_question">Empty Question</string>
+    <string name="text_yes">Yes</string>
+    <string name="text_no">No</string>
+    <string name="title_alert_exit_quiz">Are you sure want to cancel this quiz?</string>
+    <string name="title_alert_quiz_finish">Have you finished answering this quiz?</string>
+    <string name="text_score">Score 0</string>
+    <string name="text_score_value">Score %d</string>
+    <string name="title_achievement">Achievement</string>
+    <string name="title_result">Congratulations you have answered the questions in the %s category.\nHere are your achievements</string>
+    <string name="title_perfect_result">Congratulations you have completed the %s category questions perfectly. Here are your achievements</string>
+    <string name="text_answer_value">Answer to Question %d (%s)</string>
+    <string name="text_user_answer_wrong_value">Your answer is incorrect. Your answer:\n%s</string>
+    <string name="text_user_answer_correct_value">Your answer is correct. Your answer:\n%s</string>
+    <string name="text_user_answer_empty">You didn\'t answer</string>
+    <string name="text_correction_right_answer_value">Correct answer:\n%s</string>
+</resources>

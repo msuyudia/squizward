@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dimen_16">
+
+    <ImageView
+        android:id="@+id/header_bts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:src="@drawable/ic_header_bts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_title_bts_alert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:fontFamily="@font/roboto_bold"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_bts"
+        tools:text="@string/title_alert_exit_quiz"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_yes_bts_alert"
+        style="@style/ButtonAlertTheme"
+        android:background="@drawable/bg_button_green_color"
+        android:text="@string/text_yes"
+        app:layout_constraintEnd_toStartOf="@id/btn_no_bts_alert"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_bts_alert"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_no_bts_alert"
+        style="@style/ButtonAlertTheme"
+        android:background="@drawable/bg_button_red_color"
+        android:text="@string/text_no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_yes_bts_alert"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_bts_alert"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
