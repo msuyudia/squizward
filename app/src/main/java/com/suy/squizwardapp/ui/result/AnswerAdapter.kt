@@ -14,6 +14,7 @@ import com.suy.squizwardapp.utils.visible
 
 class AnswerAdapter(private val list: List<Result>) :
     RecyclerView.Adapter<AnswerAdapter.ViewHolder>() {
+    private val listAnswerOpened by lazy { mutableListOf<Int>() }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = ItemAnswerBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
@@ -45,28 +46,46 @@ class AnswerAdapter(private val list: List<Result>) :
                     }
                 }
                 tvQuestionAnswer.text = result.question?.questionText
+                when (listAnswerOpened.contains(adapterPosition)) {
+                    true -> detailAnswerVisible(binding)
+                    false -> detailAnswerHiden(binding)
+                }
                 itemView.setOnClickListener {
                     when (containerDetailAnswer.isVisible) {
                         false -> {
-                            ivArrowAnswer.setImageDrawable(
-                                ContextCompat.getDrawable(
-                                    itemView.context,
-                                    R.drawable.ic_drop_up
-                                )
-                            )
-                            containerDetailAnswer.visible()
+                            listAnswerOpened.add(adapterPosition)
+                            detailAnswerVisible(binding)
                         }
                         true -> {
-                            ivArrowAnswer.setImageDrawable(
-                                ContextCompat.getDrawable(
-                                    itemView.context,
-                                    R.drawable.ic_drop_down
-                                )
-                            )
-                            containerDetailAnswer.gone()
+                            listAnswerOpened.remove(adapterPosition)
+                            detailAnswerHiden(binding)
                         }
                     }
                 }
+            }
+        }
+
+        private fun detailAnswerHiden(binding: ItemAnswerBinding) {
+            with(binding) {
+                ivArrowAnswer.setImageDrawable(
+                    ContextCompat.getDrawable(
+                        itemView.context,
+                        R.drawable.ic_drop_down
+                    )
+                )
+                containerDetailAnswer.gone()
+            }
+        }
+
+        private fun detailAnswerVisible(binding: ItemAnswerBinding) {
+            with(binding) {
+                ivArrowAnswer.setImageDrawable(
+                    ContextCompat.getDrawable(
+                        itemView.context,
+                        R.drawable.ic_drop_up
+                    )
+                )
+                containerDetailAnswer.visible()
             }
         }
 
@@ -139,6 +158,7 @@ class AnswerAdapter(private val list: List<Result>) :
                         adapterPosition.plus(1),
                         "Incorrect"
                     )
+                tvUserAnswer.visible()
                 tvUserAnswer.text = itemView.context.getString(R.string.text_user_answer_empty)
                 tvCorrectAnswer.text = itemView.context.getString(
                     R.string.text_correction_right_answer_value,

@@ -27,9 +27,7 @@ class BottomSheetAlertDialog(private val listener: AlertListener) : BottomSheetD
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        when (title != null) {
-            true -> binding?.tvTitleBtsAlert?.text = getString(title ?: 0)
-        }
+        if (title != null) binding?.tvTitleBtsAlert?.text = getString(title ?: 0)
         binding?.btnNoBtsAlert?.setOnClickListener { dismiss() }
         binding?.btnYesBtsAlert?.setOnClickListener { listener.onAlertClicked(true) }
     }

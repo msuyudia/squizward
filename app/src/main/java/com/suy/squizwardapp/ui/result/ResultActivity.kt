@@ -14,7 +14,7 @@ import kotlin.math.roundToInt
 
 class ResultActivity : BaseActivity() {
     companion object {
-        const val EXTRA_CATEGORY = "id"
+        const val EXTRA_CATEGORY = "category"
         var answers = mutableMapOf<Int, String>()
     }
 
@@ -96,32 +96,7 @@ class ResultActivity : BaseActivity() {
         supportActionBar?.elevation = 0F
         supportActionBar?.title = getString(R.string.title_achievement)
     }
-    //private fun calculateScore(correctAnswer: String, userAnswer: String?) {
-    //    when (userAnswer.isNullOrEmpty()) {
-    //        true -> totalWrongAnswer += 1
-    //        false -> when (correctAnswer.contains(",")) {
-    //            true -> {
-    //                var isSame = true
-    //                val splitUserAnswer = userAnswer.split(",")
-    //                splitUserAnswer.forEach {
-    //                    isSame = correctAnswer.contains(it)
-    //                    if (!isSame) {
-    //                        totalWrongAnswer += 1
-    //                        return
-    //                    }
-    //                }
-    //                when (userAnswer.length == correctAnswer.length && isSame) {
-    //                    true -> totalCorrectAnswer += 1
-    //                    false -> totalWrongAnswer += 1
-    //                }
-    //            }
-    //            false -> when (correctAnswer.contains(userAnswer)) {
-    //                true -> totalCorrectAnswer += 1
-    //                false -> totalWrongAnswer += 1
-    //            }
-    //        }
-    //    }
-    //}
+
     override fun onDestroy() {
         super.onDestroy()
         answers.clear()
