@@ -1,6 +1,6 @@
 # Squizward
 ## Preview
-<p align="center"><img src="https://im4.ezgif.com/tmp/ezgif-4-34c3b759c4bc.gif" alt="animated"/></p>
+<p align="center"><img src="https://media1.giphy.com/media/hZL4G2HWrEa4PvbtRB/giphy.gif" alt="animated"/></p>
 
 ## Developed with tools and libraries:
 IDE: Android Studio</br>
